@@ -3,18 +3,23 @@
 > (공공 SI) **관리자/학생/교수 LMS 플랫폼** 팀 프로젝트 포트폴리오입니다.  
 > 원본 코드는 **팀 Org 레포**에 있으며, 이 레포지토리는 본인의 **풀스택 개발 및 인프라 설계 기여도**를 중심으로 요약한 개인 포트폴리오 페이지입니다.
 
+## Service (Live)
+- https://teamlms.duckdns.org
+- 👉 [Demo Accounts](#demo-accounts)
+
+---
+
 ## Links
-- Service (Live): https://teamlms.duckdns.org
 - Org Repository (Source): https://github.com/team-lms-2026-1/LMS-project
 - Portfolio Repo (this): https://github.com/essee2001-afk/lms-portfolio
-Figma (prototype, view-only): https://www.figma.com/proto/RxRjps2RteNVlH6J0vTxx9/Team-LMS-FIGMA-?node-id=17-20&t=CECAPJa6TQnkEFcM-1
-Use Case Diagram (draw.io): https://drive.google.com/file/d/1vGpn3qZlbVyoDKWs38B_-1B4RwdgZc89/view?usp=sharing
+- Figma (prototype, view-only): https://www.figma.com/proto/RxRjps2RteNVlH6J0vTxx9/Team-LMS-FIGMA-?node-id=17-20&t=CECAPJa6TQnkEFcM-1
+- Use Case Diagram (draw.io): https://drive.google.com/file/d/1vGpn3qZlbVyoDKWs38B_-1B4RwdgZc89/view?usp=sharing
 
 ---
 
 ## Demo Video
 
-[![Demo Video](assets/demo-thumbnail.png)](https://youtu.be/QJM7d27KuBM)
+[![Demo Video](assets/demo-thumbnail.png)](https://youtu.be/43fVNs5Q8aI)
 
 ---
 
