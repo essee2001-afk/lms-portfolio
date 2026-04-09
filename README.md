@@ -6,12 +6,14 @@
 ## Links
 - Service (Live): https://teamlms.duckdns.org
 - Org Repository (Source): https://github.com/team-lms-2026-1/LMS-project
-- Portfolio Repo (this): (본인 포트폴리오 링크로 변경 권장)
+- Portfolio Repo (this): https://github.com/essee2001-afk/lms-portfolio
+Figma (prototype, view-only): https://www.figma.com/proto/RxRjps2RteNVlH6J0vTxx9/Team-LMS-FIGMA-?node-id=17-20&t=CECAPJa6TQnkEFcM-1
+Use Case Diagram (draw.io): https://drive.google.com/file/d/1vGpn3qZlbVyoDKWs38B_-1B4RwdgZc89/view?usp=sharing
 
 ---
 
 ## Demo Video
-*(기존 PM 포트폴리오와 동일한 데모 영상을 쓰거나, 본인 개발 부분 데모 영상으로 교체 가능)*
+
 [![Demo Video](assets/demo-thumbnail.png)](https://youtu.be/QJM7d27KuBM)
 
 ---
@@ -19,7 +21,7 @@
 ## My Role / Contribution
 **개발 포지션: Fullstack & Infrastructure**
 
-### 1. Infrastructure & DevOps (100% 전담)
+### 1. Infrastructure & DevOps 
 - 단일 EC2 기반의 Nginx + Docker(Next.js, Spring Boot) 운영 환경 아키텍처 구축
 - Frontend/Backend 도메인 특성에 맞춘 이원화된 GitHub Actions CI/CD 파이프라인 자동화
 - AWS 서비스(RDS PostgreSQL, S3) 연동 및 VPC/Security Group 통합 격리망 구축
@@ -37,7 +39,7 @@
 
 ---
 
-## Technical Highlights (My Problem Solving)
+## Technical Highlights
 특히 **안정적인 시스템 인프라 시나리오 구축** 및 **BFF 패턴을 통한 인증/보안 아키텍처 설계**에 힘을 쏟았습니다.
 
 ### 1. 운영 환경을 고려한 프론트/백엔드 맞춤형 CI/CD 이원화 구축
@@ -63,52 +65,51 @@
 
 ## 🏗️ Architecture & Infrastructure Structure
 
-*(ec2_architecture.md 에 구상하신 내용을 이미지 모델링한 후 하단에 교체하셔도 됩니다.)*
-
-```mermaid
-flowchart TD
-    User["🌐 사용자 브라우저"]
-
-    subgraph EC2 ["🖥️ AWS EC2 (단일 서버)"]
-        NGINX["🔀 Nginx<br/>HTTPS SSL 종료"]
-        subgraph NET ["🐳 lms-network (가상 망)"]
-            FE["Next.js :3000 (BFF)"]
-            BE["Spring Boot :8080 (API)"]
-        end
-    end
-
-    subgraph AWS ["☁️ AWS 서비스"]
-        RDS["RDS (PostgreSQL)"]
-        S3["S3 (파일저장)"]
-    end
-
-    OAI["🤖 OpenAI API"]
-
-    User -->|"HTTPS (443)"| NGINX
-    NGINX -->|"HTTP (3000) 프록시"| FE
-    FE -->|"/api 역방향 브릿지 (서버 통신)"| BE
-    BE --> RDS & S3 & OAI
-```
+- 전체 배포 파이프라인 및 통신 흐름 다이어그램 등 상세 아키텍처는 별도 문서에 정리되어 있습니다.
+- **[👉 Architecture & Infrastructure 상세 보기](architecture.md)**
 
 ---
 
 ## Tech Stack
 
-### Web & Backend Stack
-- **Frontend / BFF**: Next.js 14, React
-- **Backend 서버**: Java 17, Spring Boot 3.5.9, Spring Security (JWT)
-- **Database**: PostgreSQL 16 (AWS RDS 연동), Flyway (DB Migration)
+### Backend
+| 기술 | 버전 | 채용 이유 |
+|---|---:|---|
+| Java | 17 | LTS 기반 안정적인 서버 런타임 |
+| Spring Boot | 3.5.9 | 표준 백엔드 프레임워크 |
+| Spring Data JPA | - | JpaRepository + 파생 메서드 + `@Query` 중심 조회/CRUD |
+| Querydsl | - | 복잡한 검색/동적 조건 조회에 선택 적용 |
+| Spring Security + JWT | - | Stateless 인증 구성 |
+| RBAC (2계층 권한) | - | URL Role + Method Authority 이중 접근 제어 |
+| PostgreSQL | - | 운영 안정성 높은 RDB |
+| Flyway + ddl validate | - | 마이그레이션/스키마 검증 기반 배포 안정성 |
+| AWS S3 (Presigned URL) | - | 파일 업로드/다운로드 처리 |
+| Spring AI + OpenAI | gpt-4o-mini | MBTI 추천 AI (schema 제약 + fallback 적용) |
+| OpenAPI (Swagger UI) | - | API 문서화/테스트, 협업 커뮤니케이션 향상 |
 
-### DevOps & Infrastructure
-- **Serverless/Cloud**: AWS EC2 (VM 호스팅), AWS S3 (오브젝트 스토리지 연동)
-- **Container 기술**: Docker, Docker Compose
-- **CICD 자동화**: GitHub Actions, GHCR(GitHub Container Registry)
-- **네트워크 웹서버**: Nginx, Let's Encrypt(certbot 등)
+### Frontend / BFF
+| 기술 | 버전 | 채용 이유 |
+|---|---:|---|
+| Next.js (BFF) | 14.2.5 | BFF 계층으로 API 집계/인증 처리 |
+| HttpOnly Cookie Auth | - | 토큰 노출 최소화(클라이언트 저장소 회피) |
+| next-intl | - | 다국어 지원(ko/en/ja) |
+| Chart.js / Recharts | - | 대시보드/통계 시각화 |
+
+### Infrastructure / DevOps
+| 기술 | 버전 | 채용 이유 |
+|---|---:|---|
+| AWS EC2 | - | 서비스 호스팅(단일 서버) |
+| Nginx + Let's Encrypt | - | HTTPS(SSL 종료) + Reverse Proxy |
+| AWS RDS (PostgreSQL) | - | 운영 DB |
+| AWS S3 | - | 파일 저장(Presigned URL) |
+| Docker | - | 컨테이너 기반 실행/배포 |
+| Docker Compose | - | 로컬 개발환경 재현 |
+| GitHub Actions | - | 배포 자동화(Backend 빌드 중심, 테스트 스킵/프론트 CI 제한) |
 
 ---
 
 ## UI Screenshots (My Works)
-*(설문, 멘토링 화면 또는 시스템 학과관리 창 등으로 스크린샷 교체를 추천합니다)*
+
 | 설문(Survey) 관리 화면 | 멘토링(Mentoring) 내역 | 사용자(계정) 로그 내역 |
 |---|---|---|
 | (예시) ![Survey1](assets/survey1.png) | (예시) ![Mentoring](assets/mentoring1.png) | (예시) ![Logs](assets/Log-1.png) |
