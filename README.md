@@ -19,7 +19,9 @@
 
 ## Demo Video
 
-[![Demo Video](assets/demo-thumbnail.png)](https://youtu.be/43fVNs5Q8aI)
+<video width="100%" controls>
+  <source src="assets/홈페이지_포트폴리오.mp4" type="video/mp4">
+</video>
 
 ---
 
@@ -36,7 +38,7 @@
 ### 2. Fullstack Development (Backend + Frontend)
 - **설문조사(Surveys):** 문항 생성 로직 설계, 답변 수집 및 통계 대시보드 풀스택 연동
 - **멘토링(Mentoring):** 교수-학생 간 멘토링 세션 신청/승인/내역 추적에 대한 도메인 로직 및 UX 개발
-- **비밀번호 재설정:** 안전한 토큰 검증 기반의 사용자 비밀번호 초기화/재설정 플로우 구현
+- **비밀번호 재설정:** 학교 계정 이메일을 입력하면 해당 메일로 보안 토큰이 포함된 재설정 권한 링크를 자동 발송하여 안전하게 비밀번호를 초기화하고 변경하는 플로우 구현
 
 ### 3. Frontend Development
 - **계정 로그 관리(Account Log):** 관리자 환경에서의 사용자 접속 시점 및 활동 내역(Audit) 조회 화면 모듈화
@@ -115,9 +117,20 @@
 
 ## UI Screenshots (My Works)
 
-| 설문(Survey) 관리 화면 | 멘토링(Mentoring) 내역 | 사용자(계정) 로그 내역 |
-|---|---|---|
-| (예시) ![Survey1](assets/survey1.png) | (예시) ![Mentoring](assets/mentoring1.png) | (예시) ![Logs](assets/Log-1.png) |
+### 1. 설문(Survey) 관리 화면
+| 목록 및 생성 | 상세 |
+|---|---|
+| ![Survey1](assets/survey.png) | ![Survey2](assets/survey2.png) |
+
+### 2. 멘토링(Mentoring) 내역
+| 멘토링 승인 및 내역 | 멘토링 채팅 |
+|---|---|
+| ![Mentoring1](assets/mentoring.png) | ![Mentoring2](assets/mentoring2.png) |
+
+### 3. 비밀번호 재설정 화면
+| 이메일 링크 발송 | 비밀번호 변경 |
+|---|---|
+| ![Password1](assets/password.png) | ![Password2](assets/password2.png) |
 
 
 ---
