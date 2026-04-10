@@ -19,9 +19,7 @@
 
 ## Demo Video
 
-<video width="100%" controls>
-  <source src="assets/홈페이지_포트폴리오.mp4" type="video/mp4">
-</video>
+<video src="https://github.com/essee2001-afk/lms-portfolio/raw/main/assets/홈페이지_포트폴리오.mp4" controls="controls" width="100%"></video>
 
 ---
 
@@ -122,7 +120,7 @@
 |---|---|
 | ![Survey1](assets/survey.png) | ![Survey2](assets/survey2.png) |
 
-### 2. 멘토링(Mentoring) 내역
+### 2. 멘토링(Mentoring) 화면
 | 멘토링 승인 및 내역 | 멘토링 채팅 |
 |---|---|
 | ![Mentoring1](assets/mentoring.png) | ![Mentoring2](assets/mentoring2.png) |
