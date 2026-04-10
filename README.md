@@ -19,7 +19,7 @@
 
 ## Demo Video
 
-<video src="https://raw.githubusercontent.com/essee2001-afk/lms-portfolio/main/assets/portfolio_demo.mp4" controls="controls" width="100%"></video>
+[![Demo Video](assets/demo-thumbnail.png)](https://github.com/essee2001-afk/lms-portfolio/blob/main/assets/portfolio_demo.mp4)
 
 ---
 
